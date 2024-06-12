@@ -1,0 +1,29 @@
+﻿.form {
+    width: 200px;
+    height: 50%;
+    border: 1px solid;
+    border-radius: .5rem;
+}
+
+    .form input[type="email"], .form input[type="password"] {
+        padding: 4px;
+        margin: 8px;
+    }
+
+    .form input[type="submit"] {
+        background-color: #4CAF50;
+        align-self: center;
+        padding: 8px 8px;
+        border-radius: 2px;
+        border: 1px solid;
+        margin-left: 50px;
+        margin-bottom: 50px;
+    }
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:200px;
+
+}

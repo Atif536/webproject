@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sunfiit_2._0v</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sunfiit_2._0v.styles.css" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Sunfit</a>
+        <nav class="navbar">
+            <a  asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="feature" asp-action="Index">Features</a>
+            <a asp-area="" asp-controller="feature" asp-action="products">Products</a>
+            <a asp-area="" asp-controller="feature" asp-action="categories">Categories</a>
+            <a asp-area="" asp-controller="feature" asp-action="review">Reviews</a>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Sign up
+            </a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart " id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+        </div>
+        <form action=".php" class="search-form">
+            <input type="search" id="search-box" placeholder="Search here.......">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/pngegg (9).png" alt="" />
+                <div class="content">
+                    <h3>Green Hoddie</h3>
+                    <span class="price">$5.99/-</span>
+                    <span class="price">Qunatity:1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/pngegg (10).png" alt="" />
+                <div class="content">
+                    <h3>Grey Hoddie</h3>
+                    <span class="price">$5.99/-</span>
+                    <span class="price">Qunatity:1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="image/pngegg (11).png" alt="" />
+                <div class="content">
+                    <h3>White Hoddie</h3>
+                    <span class="price">$5.99/-</span>
+                    <span class="price">Qunatity:1</span>
+                </div>
+            </div>
+            <div class="total">
+                Total : $17.97/-
+            </div>
+            <a href="#" class="btn">Checkout</a>
+
+        </div>
+        <form action="home/savedata" class="login-form">
+            <h3>Login Form</h3>
+            <input type="email" placeholder="Your Email" class="box" />
+            <input type="password" placeholder="Your Password" class="box" />
+            <p>Forgot Your Password <a href="">Click Here</a></p>
+            <p>Dont have an account <a href="">Create Now</a></p>
+
+            <input type="submit" value="Login Now" class="btn">
+
+        </form>
+    </header>
+
+
+
+
+   
+   
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    
+    <footer>
+
+
+        <div class="a">
+            <h3>Social medias</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nam consequatur ea.</p>
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+        <div class="a">
+            <h3>Contact No's</h3>
+            <p><i class="fa fa-phone" aria-hidden="true">030330303003</i></p>
+            <p><i class="fa fa-phone" aria-hidden="true">030330303003</i></p>
+            <p><i class="fa fa-phone" aria-hidden="true">030330303003</i></p>
+            <p><i class="fa fa-phone" aria-hidden="true">030330303003</i></p>
+            <p><i class="fa fa-phone" aria-hidden="true">030330303003</i></p>
+        </div>
+        <div class="a">
+            <h3>Quick link</h3>
+            <a href="#home" class="alink">Home</a>
+            <a href="#features" class="alink">Features</a>
+            <a href="#product" class="alink">Products</a>
+            <a href="#categories" class="alink">Categories</a>
+            <a href="#reviews" class="alink">Reviews</a>
+        </div>
+        <div class="a">
+            <h3>Our Branches</h3>
+            <a href="#home" class="alink">Sialkot</a>
+            <a href="#features" class="alink">Daska</a>
+            <a href="#product" class="alink">Gujrawala</a>
+            <a href="#categories" class="alink">Lahore</a>
+            <a href="#reviews" class="alink">Islamabad</a>
+        </div>
+
+    </footer>
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
