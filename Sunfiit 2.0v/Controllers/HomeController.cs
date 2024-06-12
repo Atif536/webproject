@@ -34,17 +34,21 @@ namespace Sunfiit_2._0v.Controllers
                 {
                     db1.Add(log1);
                     db1.SaveChanges();
+                    TempData["output"] =db1.login2.ToList();
                     ViewBag.message = "successfuly save";
+                    TempData["data"] = "success";
                 }
                 catch (Exception ex)
                 {
                     ViewBag.message = "failde  save";
+                    TempData["data"] = "faild";
                 }
                
 
 
 
             }
+            TempData.Keep();
             return View(Privacy);
         }
 
